@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="casino.css">
+	<title>Casino</title>
+</head>
+<body>
+	<div class="header">
+		<div class="computerchoyce"><p class="randomchoyce">Computer number:</p><span class="cc"></span></div>
+		<h1 class="logo">CASINO ONLINE</h1>
+		<div class="uscore"><p class="umoney">You money:</p><span class="um"></span></div>
+	</div>
+
+	<div class="container">
+
+	<ul class="btnlist">
+		<li class="btn"><a href="#" class="link" id="1"><img class="link_img" src="1.png" alt=""></a></li>
+		<li class="btn"><a href="#" class="link" id="2"><img class="link_img"src="2.png" alt=""></a></li> 
+		<li class="btn"><a href="#" class="link" id="3"><img class="link_img"src="3.png" alt=""></a></li>
+		<li class="btn"><a href="#" class="link" id="4"><img class="link_img"src="4.png" alt=""></a></li>
+		<li class="btn"><a href="#" class="link" id="5"><img class="link_img"src="5.png" alt=""></a></li>
+		<li class="btn"><a href="#" class="link" id="6"><img class="link_img"src="6.jpeg" alt=""></a></li>
+	</ul>
+	</div>
+
+	<script>
+		alert('Добро пожаловать в КАЗИНО! Испытай свою удачу, выбери число от 1 до 6, и если ты угадал, то получишь 500$, а если нет, то заплатишь 100$. У тебя всего 1000$ , поэтому будь внимателен с выбором! Если ты не угадал, то число, которое загадал компьютер высветиться в левом экране. Твой денежный баланс в правом экране. Удачи!');
+
+
+		let links = document.querySelectorAll('.link');
+		let cc = document.querySelector('.cc');
+		let um = document.querySelector('.um');
+		let bank = 1000;
+		um.textContent = bank+'$';
+
+		
+
+	
+
+
+	for (let link of links){
+
+		
+		link.onclick = function () {
+			if (bank > 0 && bank < 5000){
+			cc.textContent = "";
+			let userNumber = link.id;
+			console.log(userNumber);
+			let randomNumber = Math.floor(Math.random() * 6)+1;
+			console.log(randomNumber);
+		
+
+				if (userNumber != randomNumber){ 
+					cc.append(randomNumber);
+					bank -= 100;
+					um.textContent = "";
+					um.append(bank+'$');
+					
+				}
+
+				else{
+					alert('Ты угадал! Выигрыш 500$!');
+					bank +=500;
+					um.textContent = "";
+					um.append(bank+'$');
+
+}
+} else if (bank>=5000){alert('Ты обанкротил Казино, играть запрещено!');}
+else{alert ('ТЫ ПРОИГРАЛ ВСЕ ДЕНЬГИ');}
+	
+	} 
+
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+ body {
+ 	margin: 0;
+ 	padding: 0;
+    background: url(bg.jpg) no-repeat; 
+    background-size: cover;
+    color: coral;
+}
+
+h1 {
+	font-size: 150px;
+	margin: 0;
+	text-align: center;
+    animation: blink 2s infinite; /* Параметры анимации */
+   }
+   @keyframes blink {
+
+    from { opacity: 1;
+    	color: blueviolet; /* Непрозрачный текст */ }
+    to { opacity: 0;/* Прозрачный текст */ }
+
+
+   }
+
+.link_img{
+width: 100px;
+ 	}
+.header{
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.computerchoyce {
+	display: block;
+	
+	text-align: center;
+	min-width: 300px;
+	max-width: 300px;
+	height: 300px;
+	background-color: black;
+	border:  10px solid coral;
+
+}	
+
+.uscore{
+	display: block;
+	
+	text-align: center;
+	min-width: 300px;
+	max-width: 300px;
+	height: 300px;
+	background-color: black;
+	border:  10px solid coral;
+
+}
+
+.logo {
+	margin: 0;
+	text-align: center;
+	color: blueviolet;
+	font-size: 150px;
+}	
+
+.btn {
+list-style-type: none;
+
+}
+
+.btnlist {
+	display: flex;
+	text-align: center;
+
+}
+
+.cc {
+	
+	font-size: 200px;
+
+	
+
+}
+
+.um{
+	font-size: 100px;
+}
+.container {
+	display: flex;
+	background-color: black;
+	border:  10px solid green;
+	width: 700px;
+	height: 180px;
+	position: absolute;
+	top: 50%;
+	left:  50%;
+	margin: 0 0 0 -350px;
+	align-items: center;
+}
